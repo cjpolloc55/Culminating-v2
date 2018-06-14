@@ -43,11 +43,11 @@ def itemRNG():
                 print ("--------------------------------------")
                 print("You found a Big Laser!")
                 
-                dmg = dmg + 75
+                dmg = 75
 
 
         if item == 11:
-                dmg = dmg + 50
+                dmg =  50
                 print ("--------------------------------------")
                 print("You found a Medium Laser")
                 
@@ -57,7 +57,7 @@ def itemRNG():
                 print ("--------------------------------------")
                 print("You found a small laser")
                 
-                dmg = dmg + 25
+                dmg = 25
 def healthRng():
         global healthItem
         item = randint (1,4)
@@ -89,7 +89,7 @@ def fightMenu ():
         print ("5. Heal")
 
 
-backpack = []
+
 
 healthItem = 0
 health = 100
@@ -139,11 +139,11 @@ for i in range(0, 1):
                 print ("You can heal for",healthItem,"damage")
                 print ("--------------------------------------")
 
-while True: #Fighting Menu
-        menu()
+while True: #Fighting and Actions menu 
+        menu()     
         print ("--------------------------------------")
         actChoice = input("What would you like to do?")
-        if actChoice == "1":
+        if actChoice == "1": 
                 while True:
                         fightMenu()
                         print ("--------------------------------------")
@@ -198,9 +198,15 @@ while True: #Fighting Menu
                                 print ("--------------------------------------")
                                 print ("Game Over!")
                                 quit ()
-                                                
-                                        
-                    
 
-  
-  
+        if actChoice == "2":
+                health = health + healthItem
+                print ("Your health is now",health)
+                healthRng()
+                print ("You can heal for",healthItem)
+        elif actChoice == "3":
+                itemRNG ()
+                print ("--------------------------------------")
+                print ("Your new weapon does",dmg,"damage")
+                print ("--------------------------------------")
+        
