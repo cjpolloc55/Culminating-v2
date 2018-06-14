@@ -210,3 +210,4 @@ while True: #Fighting and Actions menu
                 print ("Your new weapon does",dmg,"damage")
                 print ("--------------------------------------")
         
+        
