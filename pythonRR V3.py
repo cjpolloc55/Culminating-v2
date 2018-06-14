@@ -198,6 +198,10 @@ while True: #Fighting and Actions menu
                                 print ("--------------------------------------")
                                 print ("Game Over!")
                                 quit ()
+                        if enemyCount <= 0:
+                                print ("--------------------------------------")
+                                print("#1 Victory Royale!")
+                                quit ()
 
         if actChoice == "2":
                 health = health + healthItem
@@ -210,3 +214,5 @@ while True: #Fighting and Actions menu
                 print ("Your new weapon does",dmg,"damage")
                 print ("--------------------------------------")
         
+
+                        
